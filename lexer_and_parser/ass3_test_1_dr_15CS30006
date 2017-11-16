@@ -1,0 +1,1313 @@
+type_specifier -> void
+declaration_specifiers -> type_specifier
+direct_declarator -> IDENTIFIER
+direct_declarator -> direct_declarator ()
+declarator -> direct_declarator
+type_specifier -> unsigned
+type_specifier -> int
+declaration_specifiers -> type_specifier
+declaration_specifiers -> type_specifier declaration_specifiers
+direct_declarator -> IDENTIFIER
+declarator -> direct_declarator
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+initializer -> assignment_expr
+init_declarator -> declarator = initializer
+init_declarator_list -> init_declarator
+declaration -> declaration_specifiers init_declarator_list ;
+block_item -> declaration
+block_item_list -> block_item
+type_specifier -> signed
+type_specifier -> int
+declaration_specifiers -> type_specifier
+declaration_specifiers -> type_specifier declaration_specifiers
+direct_declarator -> IDENTIFIER
+declarator -> direct_declarator
+init_declarator -> declarator
+init_declarator_list -> init_declarator
+declaration -> declaration_specifiers init_declarator_list ;
+block_item -> declaration
+block_item_list -> block_item_list block_item
+type_specifier -> bool
+declaration_specifiers -> type_specifier
+direct_declarator -> IDENTIFIER
+declarator -> direct_declarator
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+initializer -> assignment_expr
+init_declarator -> declarator = initializer
+init_declarator_list -> init_declarator
+declaration -> declaration_specifiers init_declarator_list ;
+block_item -> declaration
+block_item_list -> block_item_list block_item
+type_specifier -> char
+declaration_specifiers -> type_specifier
+pointer -> *
+direct_declarator -> IDENTIFIER
+declarator -> pointer direct_declarator
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+initializer -> assignment_expr
+init_declarator -> declarator = initializer
+init_declarator_list -> init_declarator
+declaration -> declaration_specifiers init_declarator_list ;
+block_item -> declaration
+block_item_list -> block_item_list block_item
+type_specifier -> char
+declaration_specifiers -> type_specifier
+pointer -> *
+direct_declarator -> IDENTIFIER
+declarator -> pointer direct_declarator
+primary_expr -> STRINGLITERAL
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+initializer -> assignment_expr
+init_declarator -> declarator = initializer
+init_declarator_list -> init_declarator
+declaration -> declaration_specifiers init_declarator_list ;
+block_item -> declaration
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+expression -> assignment_expr
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+constant_expr -> conditional_expr
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> =
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+labeled_statement -> case constant_expr : statement
+statement -> labeled_statement
+block_item -> statement
+block_item_list -> block_item
+jump_statement -> break ;
+statement -> jump_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+constant_expr -> conditional_expr
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> =
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+labeled_statement -> case constant_expr : statement
+statement -> labeled_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+jump_statement -> break ;
+statement -> jump_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+constant_expr -> conditional_expr
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> =
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+labeled_statement -> case constant_expr : statement
+statement -> labeled_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+jump_statement -> break ;
+statement -> jump_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> =
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+labeled_statement -> default : statement
+statement -> labeled_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+compound_statement -> { block_item_list }
+statement -> compound_statement
+selection_statement -> switch ( expression ) statement
+statement -> selection_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+type_specifier -> float
+declaration_specifiers -> type_specifier
+direct_declarator -> IDENTIFIER
+declarator -> direct_declarator
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+initializer -> assignment_expr
+init_declarator -> declarator = initializer
+init_declarator_list -> init_declarator
+declaration -> declaration_specifiers init_declarator_list ;
+block_item -> declaration
+block_item_list -> block_item_list block_item
+type_specifier -> float
+declaration_specifiers -> type_specifier
+direct_declarator -> IDENTIFIER
+declarator -> direct_declarator
+unary_operator -> -
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+unary_expr -> unary_operator cast_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+initializer -> assignment_expr
+init_declarator -> declarator = initializer
+init_declarator_list -> init_declarator
+declaration -> declaration_specifiers init_declarator_list ;
+block_item -> declaration
+block_item_list -> block_item_list block_item
+type_specifier -> short
+type_specifier -> int
+declaration_specifiers -> type_specifier
+declaration_specifiers -> type_specifier declaration_specifiers
+direct_declarator -> IDENTIFIER
+declarator -> direct_declarator
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+initializer -> assignment_expr
+init_declarator -> declarator = initializer
+init_declarator_list -> init_declarator
+declaration -> declaration_specifiers init_declarator_list ;
+block_item -> declaration
+block_item_list -> block_item_list block_item
+type_specifier -> char
+declaration_specifiers -> type_specifier
+direct_declarator -> IDENTIFIER
+declarator -> direct_declarator
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+initializer -> assignment_expr
+init_declarator -> declarator = initializer
+init_declarator_list -> init_declarator
+declaration -> declaration_specifiers init_declarator_list ;
+block_item -> declaration
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> =
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_opt -> expression
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> relational_expr < shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+expression -> assignment_expr
+primary_expr -> ( expression )
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> equality_expr != relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+expression -> assignment_expr
+primary_expr -> ( expression )
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+inclusiveOR_expr -> logicalAND_expr && inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+expression -> assignment_expr
+expression_opt -> expression
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+unary_expr -> ++ unary_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+expression -> assignment_expr
+expression_opt -> expression
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+expression -> assignment_expr
+postfix_expr -> postfix_expr [ expression ]
+unary_expr -> postfix_expr
+assignment_operator -> =
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> relational_expr >= shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+expression -> assignment_expr
+jump_statement -> continue ;
+statement -> jump_statement
+jump_statement -> break ;
+statement -> jump_statement
+selection_statement -> if (expression ) statement else statement
+statement -> selection_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+compound_statement -> { block_item_list }
+statement -> compound_statement
+iteration_statement -> for ( expression ; expression ; expression ) statement
+statement -> iteration_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+expression_opt -> 
+expression_opt -> 
+expression_opt -> 
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> =
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item
+compound_statement -> { block_item_list }
+statement -> compound_statement
+iteration_statement -> for ( expression ; expression ; expression ) statement
+statement -> iteration_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> equality_expr == relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+expression -> assignment_expr
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> =
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> multiplicative_expr % cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> relational_expr >= shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+expression -> assignment_expr
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> %=
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+selection_statement -> if ( expression ) statement
+statement -> selection_statement
+selection_statement -> if (expression ) statement else statement
+statement -> selection_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> =
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> additive_expr - multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+postfix_expr -> postfix_expr ++
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+postfix_expr -> postfix_expr --
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> +=
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+postfix_expr -> postfix_expr --
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+compound_statement -> { block_item_list }
+statement -> compound_statement
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> equality_expr != relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> equality_expr != relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+expression -> assignment_expr
+primary_expr -> ( expression )
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalOR_expr || logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+expression -> assignment_expr
+iteration_statement -> do statement while ( expression ) ;
+statement -> iteration_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> =
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> additive_expr + multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> =
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> multiplicative_expr * cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> =
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> multiplicative_expr / cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> =
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> multiplicative_expr / cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> -=
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> /=
+primary_expr -> CONSTANT
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> =
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> exclusiveOR_expr ^ AND_expr 
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> =
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> inclusiveOR_expr | exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> ^=
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> |=
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+assignment_operator -> &=
+primary_expr -> IDENTIFIER
+postfix_expr -> primary_expr
+unary_expr -> postfix_expr
+cast_expr -> unary_expr
+multiplicative_expr -> cast_expr
+additive_expr -> multiplicative_expr
+shift_expr -> additive_expr
+relational_expr -> shift_expr
+equality_expr -> relational_expr
+AND_expr -> equality_expr
+exclusiveOR_expr -> AND_expr
+inclusiveOR_expr -> exclusiveOR_expr
+logicalAND_expr -> inclusiveOR_expr
+logicalOR_expr -> logicalAND_expr
+conditional_expr -> logicalOR_expr
+assignment_expr -> conditional_expr
+assignment_expr -> unary_expr assignment_operator assignment_expr
+expression -> assignment_expr
+expression_statement -> expression ;
+statement -> expression_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+jump_statement -> return ;
+statement -> jump_statement
+block_item -> statement
+block_item_list -> block_item_list block_item
+compound_statement -> { block_item_list }
+function_definition -> declaration_specifiers declarator compound_statementexternal_declaration -> function_definition
+translation_unit -> external_declaration
