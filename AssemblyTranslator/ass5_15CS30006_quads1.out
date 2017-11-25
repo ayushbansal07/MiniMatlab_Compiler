@@ -1,0 +1,22 @@
+  0. add FuncBegin
+  1. t000 = a + b
+  2. return t000
+  3. add FuncEnd
+  4. main FuncBegin
+  5. t001 = 6
+  6. a = t001
+  7. t002 = 5
+  8. t003 = a + t002
+  9. t004 = t003 + a
+ 10. c = t004
+ 11. param c
+ 12. param c
+ 13. t005 = call add, 2
+ 14. c = t005
+ 15. t006 = 5
+ 16. t007 = c * t006
+ 17. d = t007
+ 18. param d
+ 19. t008 = call printInt, 1
+ 20. k = t008
+ 21. main FuncEnd

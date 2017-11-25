@@ -1,0 +1,26 @@
+  0. fact FuncBegin
+  1. t000 = 1
+  2. if (n == t000) goto 5
+  3. goto 8
+  4. goto 8
+  5. t001 = 1
+  6. return t001
+  7. goto 8
+  8. t002 = 1
+  9. t003 = n - t002
+ 10. param t003
+ 11. t004 = call fact, 1
+ 12. t005 = n * t004
+ 13. return t005
+ 14. fact FuncEnd
+ 15. main FuncBegin
+ 16. t006 = 5
+ 17. x = t006
+ 18. param x
+ 19. t007 = call fact, 1
+ 20. y = t007
+ 21. param x
+ 22. t008 = call printInt, 1
+ 23. param y
+ 24. t009 = call printInt, 1
+ 25. main FuncEnd

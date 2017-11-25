@@ -1,0 +1,12 @@
+int printInt(int x);
+int readInt(int *x);
+int printFlt(double d);
+int readFlt(double *x);
+
+int add(int a, int b){
+return a+b;
+}
+
+int main(){
+
+}

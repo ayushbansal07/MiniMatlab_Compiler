@@ -1,0 +1,12 @@
+  0. main FuncBegin
+  1. t000 = & d
+  2. param t000
+  3. t001 = call readFlt, 1
+  4. t002 = uminus(d)
+  5. d2 = t002
+  6. t003 = 5.300000
+  7. t004 = d2 * t003
+  8. d2 = t004
+  9. param d2
+ 10. t005 = call printFlt, 1
+ 11. main FuncEnd

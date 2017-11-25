@@ -1,0 +1,24 @@
+    /*int paramOffset = +8;
+    int localOffset = 0;
+    // sym->entries[0]->offset = +4;
+    for(int i = 0; i < (int)sym->entries.size(); ++i) {
+        if(sym->entries[i]->scope == "param") {
+            sym->entries[i]->offset = paramOffset;
+            if(sym->entries[i]->type->bType == type_CHAR) sym->entries[i]->size = SIZE_OF_INT;
+            paramOffset += sym->entries[i]->size;
+        } else if(sym->entries[i]->scope == "local" || sym->entries[i]->scope == "temp") {
+            localOffset -= sym->entries[i]->size;
+            sym->entries[i]->offset = localOffset;
+        }
+    }
+    sym->sizeLocal = ((abs(localOffset) + 15) / 16) * 16;
+    sym->sizeParam = abs(paramOffset) - 8;*/
+
+
+
+
+ /*for(int i = 0; i < (int)strLabels.size(); ++i) {
+        string label = ".LC" + i2s(i);
+        fprintf(out, "%s:\n", label.c_str());
+        fprintf(out, "\t.string\t%s\n", strLabels[i].c_str());
+    }*/

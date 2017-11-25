@@ -1,0 +1,11 @@
+  0. main FuncBegin
+  1. t000 = & x
+  2. param t000
+  3. t001 = call readInt, 1
+  4. t002 = 5.860000
+  5. t003 = Int2Dbl(x)
+  6. t004 = t002 + t003
+  7. d1 = t004
+  8. param d1
+  9. t005 = call printFlt, 1
+ 10. main FuncEnd

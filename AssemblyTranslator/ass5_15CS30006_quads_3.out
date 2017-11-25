@@ -1,0 +1,36 @@
+  0. fib FuncBegin
+  1. t000 = 1
+  2. if (n <= t000) goto 5
+  3. goto 8
+  4. goto 8
+  5. t001 = 1
+  6. return t001
+  7. goto 8
+  8. t002 = 1
+  9. t003 = n - t002
+ 10. param t003
+ 11. t004 = call fib, 1
+ 12. t005 = 2
+ 13. t006 = n - t005
+ 14. param t006
+ 15. t007 = call fib, 1
+ 16. t008 = t004 + t007
+ 17. return t008
+ 18. fib FuncEnd
+ 19. main FuncBegin
+ 20. t009 = & d
+ 21. param t009
+ 22. t010 = call readFlt, 1
+ 23. t011 = uminus(d)
+ 24. d2 = t011
+ 25. t012 = 5.300000
+ 26. t013 = d2 * t012
+ 27. d2 = t013
+ 28. param d2
+ 29. t014 = call printFlt, 1
+ 30. t015 = 5
+ 31. param t015
+ 32. t016 = call fib, 1
+ 33. param t016
+ 34. t017 = call printInt, 1
+ 35. main FuncEnd

@@ -1,0 +1,10 @@
+int printInt(int x);
+int readInt(int *x);
+int printFlt(double d);
+int readFlt(double *x);
+
+int main(){
+	Matrix A[2][3] = {1.0,2.0,3.0;4.0,5.0,6.0};
+	printFlt(A[0][0]);
+	printFlt(A[0][1];
+}

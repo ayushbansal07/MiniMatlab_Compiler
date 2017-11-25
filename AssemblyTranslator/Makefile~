@@ -1,0 +1,27 @@
+all:	a.out 
+a.out:	lex.yy.c ass5_15CS30006.tab.h ass5_15CS30006_translator.cxx ass5_15CS30006_translator.h ass5_15CS30006_target_transalator.cxx
+	g++ ass5_15CS30006_translator.cxx ass5_15CS30006_target_transalator.cxx ass5_15CS30006.tab.c lex.yy.c -ly -lfl
+ass5_15CS30006.tab.h:	ass5_15CS30006.y
+	bison -d ass5_15CS30006.y
+ass5_15CS30006.tab.c:	ass5_15CS30006.y
+	bison ass5_15CS30006.y
+lex.yy.c:	ass5_15CS30006.l
+	flex ass5_15CS30006.l
+clean:
+	-rm a.out lex.yy.c ass5_15CS30006.tab.c ass5_15CS30006.tab.h o1.out o2.out o3.out o4.out o5.out
+run1:	a.out ass5_15CS30006_test1.mm
+	./a.out < ass5_15CS30006_test1.mm
+	gcc ass5_15CS30006_1.s ass2_15CS30006.c -o o1.out
+run2:	a.out ass5_15CS30006_test2.mm
+	./a.out < ass5_15CS30006_test2.mm
+	gcc ass5_15CS30006_2.s ass2_15CS30006.c -o o2.out
+run3:	a.out ass5_15CS30006_test3.mm
+	./a.out < ass5_15CS30006_test3.mm
+	gcc ass5_15CS30006_3.s ass2_15CS30006.c -o o3.out
+run4:	a.out ass5_15CS30006_test4.mm
+	./a.out < ass5_15CS30006_test4.mm
+	gcc ass5_15CS30006_4.s ass2_15CS30006.c -o o4.out
+run5:	a.out ass5_15CS30006_test5.mm
+	./a.out < ass5_15CS30006_test5.mm
+	gcc ass5_15CS30006_5.s ass2_15CS30006.c -o o5.out
+
